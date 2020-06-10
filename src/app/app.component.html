@@ -1,0 +1,32 @@
+<mat-toolbar color="primary">
+Angular Material
+</mat-toolbar>
+<main>
+  <mat-card>
+    <form action="">
+      <img src="https://angular.io/assets/images/logos/angular/angular.svg" width="120" alt="" style="margin: auto ;">
+      <mat-form-field class="example-full-width">
+        <input  type="text" matInput placeholder="Titulo" #title >
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select placeholder="Album Id" #albumId>
+          <mat-option *ngFor="let id of albumsId" value="id">
+            {{id}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input type="text" matInput placeholder="URL" #url >
+      </mat-form-field>
+
+      <button mat-button mat-flat-button color="primary" style=" width:100%;">
+        Save
+      </button>
+    </form>
+  </mat-card>
+  <app-photos></app-photos>
+</main>
+
+
